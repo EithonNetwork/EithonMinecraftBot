@@ -1,35 +1,19 @@
 name: EithonBot
 main: net.eithon.plugin.bot.Plugin
-version: 1.3
+version: 0.1
 author: vanbrayne
-description: A Minecraft plugin for turning "Free Build" on and off
+description: A Minecraft plugin for a virtual player
 depend: [EithonLibrary]
 commands:
   bot:
     description: Variations of survival/creative modes
-    usage: /bot on | off 
+    usage: /bot create
     permission-message: You don't have <permission>
 permissions:
   bot.*:
     description: Gives access to all bot commands
     default: op
-    bot.on: true
-    bot.off: true
-    bot.release: true
-    bot.canfly: true
-    bot.nocooldown: true
-  bot.on:
-    description: Access to /bot on command
-    default: op
-  bot.off:
-    description: Access to /bot off command
-    default: op
-  bot.release:
-    description: Access to /bot release command
-    default: op
-  bot.canfly:
-    description: Can fly even in bot mode
-    default: op
-  bot.nocooldown:
-    description: Can toogle between on and off without cooldown time
+    bot.create: true
+  bot.create:
+    description: Access to /bot create command
     default: op
