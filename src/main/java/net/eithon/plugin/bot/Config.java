@@ -1,15 +1,13 @@
 package net.eithon.plugin.bot;
 
-import java.util.List;
-
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.World;
-
 import net.eithon.library.extensions.EithonPlugin;
 import net.eithon.library.plugin.ConfigurableCommand;
 import net.eithon.library.plugin.ConfigurableMessage;
 import net.eithon.library.plugin.Configuration;
+
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.World;
 
 public class Config {
 	public static void load(EithonPlugin plugin)
