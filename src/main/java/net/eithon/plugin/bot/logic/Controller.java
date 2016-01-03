@@ -3,22 +3,17 @@ package net.eithon.plugin.bot.logic;
 import java.util.UUID;
 
 import net.eithon.library.extensions.EithonPlugin;
-import net.eithon.library.json.PlayerCollection;
-import net.eithon.library.plugin.Logger.DebugPrintLevel;
 import net.eithon.plugin.bot.Config;
-import net.minecraft.server.v1_8_R2.EntityPlayer;
-import net.minecraft.server.v1_8_R2.PlayerInteractManager;
-import net.minecraft.server.v1_8_R2.PlayerList;
-import net.minecraft.server.v1_8_R2.WorldServer;
+import net.minecraft.server.v1_8_R3.EntityPlayer;
+import net.minecraft.server.v1_8_R3.PlayerInteractManager;
+import net.minecraft.server.v1_8_R3.PlayerList;
+import net.minecraft.server.v1_8_R3.WorldServer;
 
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_8_R2.CraftServer;
-import org.bukkit.craftbukkit.v1_8_R2.CraftWorld;
-import org.bukkit.entity.Player;
+import org.bukkit.craftbukkit.v1_8_R3.CraftServer;
+import org.bukkit.craftbukkit.v1_8_R3.CraftWorld;
 
-import com.google.common.base.Charsets;
 import com.mojang.authlib.GameProfile;
 
 public class Controller {

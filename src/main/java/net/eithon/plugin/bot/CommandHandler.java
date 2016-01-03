@@ -4,7 +4,6 @@ import net.eithon.library.extensions.EithonPlayer;
 import net.eithon.library.extensions.EithonPlugin;
 import net.eithon.library.plugin.CommandParser;
 import net.eithon.library.plugin.ICommandHandler;
-import net.eithon.library.time.CoolDown;
 import net.eithon.plugin.bot.logic.Controller;
 
 import org.bukkit.command.CommandSender;
