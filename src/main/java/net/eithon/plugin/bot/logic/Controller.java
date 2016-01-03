@@ -29,11 +29,10 @@ public class Controller {
 	}
 
 	public void createBot(Location location) {
-		String name = ChatColor.BLUE + "EithonBot1";
 		WorldServer world = ((CraftWorld) location.getWorld()).getHandle();
 		PlayerList playerList = ((CraftServer) Bukkit.getServer()).getHandle();
-		UUID uuid = UUID.nameUUIDFromBytes(("OfflinePlayer:" + name).getBytes(Charsets.UTF_8));
-		GameProfile gameProfile = new GameProfile(uuid, name);
+		UUID uuid = UUID.fromString(Config.V.botUUID);
+		GameProfile gameProfile = new GameProfile(uuid, Config.V.botName);
 
 		EntityPlayer entityplayer = new EntityPlayer(playerList.getServer(), world, gameProfile, new PlayerInteractManager(world));
 		new DummyPlayerConnection(playerList.getServer(), new DummyNetworkManager(), entityplayer);

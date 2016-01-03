@@ -2,6 +2,10 @@ package net.eithon.plugin.bot;
 
 import java.util.List;
 
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.World;
+
 import net.eithon.library.extensions.EithonPlugin;
 import net.eithon.library.plugin.ConfigurableCommand;
 import net.eithon.library.plugin.ConfigurableMessage;
@@ -17,14 +21,16 @@ public class Config {
 
 	}
 	public static class V {
-		public static long coolDownTimeInSeconds;
-		public static  List<String> applicableWorlds;
-		public static float flySpeed;
+		public static Location botLocation;
+		public static String botName;
+		public static String botUUID;
 
 		static void load(Configuration config) {
-			coolDownTimeInSeconds = config.getSeconds("CoolDownTime", "30m");
-			applicableWorlds = config.getStringList("FreebuildWorldNames");
-			flySpeed = (float) config.getDouble("FlySpeed", 0.1);
+			botName = config.getString("BotName", "EithonBot");
+			botUUID = config.getString("BotUUID", "afa12010-b168-11e5-bf7f-feff819cdc9f");
+			String worldName = config.getString("BotWorld", "world");
+			World world = Bukkit.getWorld(worldName);
+			botLocation = world.getSpawnLocation();
 		}
 
 	}
